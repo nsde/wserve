@@ -1,6 +1,13 @@
 wmap = {}
 
-def wpage(path: str):
+def wpage(path: str, pretty=False):
     def decorator(func):
-        wmap[path] = func()
+        outp = func()
+        
+        with open('wserve/templates/base.html', 'r') as f:
+            base_html = f.read()
+
+        html = base_html.replace('{{ content | safe }}', outp)
+
+        wmap[path] = html
     return decorator

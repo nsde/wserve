@@ -1,13 +1,9 @@
 import wserve
 
-@wserve.wpage('/')
+@wserve.wpage('/', pretty=True) # will use Simple.CSS to style the page a bit
 def index():
-    return 'Hello There'
+    return '<h2>Hello There</h2>'
 
-@wserve.wpage('/hi')
-def hi():
-    return 'Lorem Ipsum'
-
-server = wserve.WServer(port=1234)
-# server.show()
+server = wserve.WServer() #
+# server.show() # opens the server in your web browser
 server.run()
