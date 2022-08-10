@@ -17,6 +17,6 @@ def whandle(wmap):
                 if self.path == path:
                     self._serve(html)
                     return
-            self._serve('<h1>Error 404 - Not found.</h1><hr>WServe', 404)
+            self._serve('<h1>Error 404 - Not found.</h1><hr>wServe', 404)
 
     return WHandler

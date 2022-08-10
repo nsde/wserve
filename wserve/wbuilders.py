@@ -34,8 +34,6 @@ class WBuilder:
         self.html_full = self.html_before + element_html + self.html_after
         return self.html_full
 
-    def add_navbar(self)
-
     def build(self, *args):
         return self.html_before + '\n'.join(args) + self.html_after
 
