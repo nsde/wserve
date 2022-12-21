@@ -1,5 +1,5 @@
 # wServe
-A simple webserver build from scratch in Python!
+A simple webserver built from scratch using Python!
 
 ```py
 import wserve
